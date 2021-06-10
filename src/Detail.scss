@@ -1,0 +1,54 @@
+
+
+$메인컬러 : #FF0000;
+
+// 애니메이션 시작할 때 적용 css
+.wow-enter{
+    opacity: 0;
+}
+
+// 애니메이션 동작할 때 적용할 css
+.wow-enter-active{
+    opacity: 1;
+    transition: all 300ms;
+}
+
+@mixin 함수() {
+    background: #d18e8e;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 100%;
+    margin:auto;
+}
+
+.red{
+    color:$메인컬러;
+}
+
+.my-alert{
+    @include 함수()
+}
+
+.my-alert-red{
+    @extend.my-alert;
+    background: red;
+}
+
+.my-alert p{
+    margin-bottom: 0px;
+}
+
+
+// div.container h4{
+//     color : blue;
+// }
+
+
+// div.container{
+//     h4{
+//         color:blue;
+//     }
+// }
+
+
